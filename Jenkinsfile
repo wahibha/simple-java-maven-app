@@ -6,6 +6,13 @@ pipeline {
         }
     }
     
+    environment {
+       NEXUS_VERSION = "nexus3"
+       NEXUS_PROTOCOL = "http"
+       NEXUS_URL = "localhost:8081"
+       NEXUS_CREDENTIAL_ID = "nexus_credentials"
+    }
+
     options {
         skipStagesAfterUnstable()
     }
